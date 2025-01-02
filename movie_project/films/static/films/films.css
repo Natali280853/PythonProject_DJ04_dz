@@ -1,0 +1,19 @@
+<style>
+    /* Дополнительные стили */
+    aside {
+        background-color: #f8f9fa; /* Светлый фон для сайдбара */
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    films {
+        padding: 20px;
+    }
+    .logo {
+        display: block;
+        margin: 0 auto 10px;
+    }
+    .nav-link {
+        font-weight: bold;
+    }
+</style>

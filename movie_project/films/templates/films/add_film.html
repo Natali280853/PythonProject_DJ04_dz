@@ -1,0 +1,26 @@
+{% extends 'films/base.html' %}
+
+{% block title %}
+Добавить фильм
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Добавить новый фильм</h1>
+    <form method="POST" action="{% url 'add_film' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="title">Название</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Описание</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="review">Отзыв</label>
+            <textarea class="form-control" id="review" name="review" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Сохранить фильм</button>
+        <a href="{% url 'list_films' %}" class="btn btn-secondary">Назад к списку фильмов</a>
+    </form>
+{% endblock %}
