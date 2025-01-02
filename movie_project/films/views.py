@@ -3,6 +3,13 @@ from .forms import FilmForm
 from .models import Film
 
 
+def index(request):
+    data = {
+        'caption': "Фильмы"
+    }
+    return render(request, 'films/index.html', data)
+
+
 def add_film(request):
     if request.method == 'POST':
         form = FilmForm(request.POST)
